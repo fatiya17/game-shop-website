@@ -1,0 +1,204 @@
+.swiper {
+  width: 90%;
+  padding-bottom: 30px;
+}
+
+.swiper-slide {
+  width: 550px;
+  height: 350px;
+}
+
+.gameSlider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+/* overlay gelap */
+.gameSlider::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  pointer-events: none;
+}
+
+.swiper-slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 30px;
+}
+
+/* tombol navigation swiper */
+.gameSwiper .swiper-button-prev,
+.gameSwiper .swiper-button-next {
+  width: 50px;
+  height: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  backdrop-filter: blur(12px);
+  bottom: 10px !important;
+  padding: 10px;
+  z-index: 5000;
+}
+
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.gameSlider .content {
+  position: absolute;
+  bottom: 20px;
+  z-index: 1000;
+  width: 60%;
+}
+
+.gameSlider .content h2 {
+    font-family: 'Bauhaus 93', 'Arial Black', sans-serif; 
+    font-size: 3.9rem;
+    color: rgba(0, 0, 0, 0.522); 
+    -webkit-text-stroke: 0.1px #ffffff; 
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.919);
+    line-height: 0.9;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.gameSlider .content p {
+    color: #ebebeb;
+    font-size: 0.8rem;
+}
+
+.gameSlider .content .buttons {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+.gameSlider .content .buttons a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.gameSlider .content .buttons .orderBtn {
+    padding: 8px 20px;
+    background: var(--second);
+    border-radius: 10px;
+}
+
+.gameSlider .content .buttons .playBtn {
+    height: 50px;
+    width: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.playBtn .play {
+    display: block;
+}
+
+.playBtn .pause {
+    display: none;
+}
+
+.swiper-slide.swiper-slide-active .playBtn.active .play {
+    display: none;
+}
+
+.swiper-slide.swiper-slide-active .playBtn.active .pause {
+    display: block;
+}
+
+.swiper-slide .video iframe {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 85%;
+    height: 75%;
+    border-radius: 0 30px 0 30px !important;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    background: var(--second);
+    box-shadow: 
+    -5px -5px 15px rgba(255, 255, 255, 0.1),
+     5px  5px 15px rgba(0, 0, 0, 0.35);
+    z-index: 1100;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.5s;
+    transform-origin: top right;
+}
+
+.swiper-slide.swiper-slide-active .video.active iframe {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .swiper {
+    width: 100%; 
+    padding-bottom: 50px; 
+  }
+
+  .swiper-slide {
+    width: 90%; 
+    height: 300px; 
+  }
+
+  .gameSlider .content {
+    width: 100%;
+    bottom: 15px;
+    padding: 0 10px;
+    text-align: left; 
+  }
+
+  .gameSlider .content h2 {
+    font-size: 2rem; 
+  }
+
+  .gameSlider .content p {
+    font-size: 0.7rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Tombol Play Video */
+  .gameSlider .content .buttons .playBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  /* Video iframe responsive */
+  .swiper-slide .video iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px !important;
+  }
+}
