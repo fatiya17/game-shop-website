@@ -1,0 +1,187 @@
+.sideMenu {
+    width: 22%;
+    height: 100%;
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    background: var(--bgColor);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+}
+
+.sideMenu .logo {
+    font-family: 'Bauhaus 93';
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    gap: 15px;
+    font-size: 3.5em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.sideMenu .nav {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 15px;
+}
+
+.sideMenu .nav li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    color: white;
+    padding: 10px 20px;
+    gap: 25px;
+    background: var(--bgColor);
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    transition: 0.5s;
+    width: 100%;
+}
+
+.sideMenu .nav li a:hover,
+.sideMenu .nav li a.active {
+    box-shadow:
+        -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.sideMenu .social {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    transition: 0.5s;
+}
+
+.sideMenu .social li a {
+    font-size: 1.2em;
+    color: white;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.sideMenu .social li a:hover {
+    color: var(--second);
+}
+
+.sideMenu .social li a.share {
+    background: var(--second);
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 0.3s;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideMenu .social li a.share:hover {
+    background: var(--primary);
+}
+
+.sideMenu.active {
+    width: 7%;
+    transition: 1s;
+    overflow: hidden;
+    align-items: center;
+}
+
+.sideMenu.active .brand,
+.sideMenu.active .navName {
+    display: none;
+}
+
+.sideMenu.active .nav li a {
+    justify-content: center;
+}
+
+.sideMenu.active .social {
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .sideMenu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80px;
+        height: 100vh;
+        background: var(--bgColor);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+        transition: 0.3s ease-in-out;
+        padding-top: 100px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sideMenu.active {
+        left: 0;
+        width: 80px !important;
+    }
+
+    .sideMenu .brand,
+    .sideMenu .navName,
+    .sideMenu .logo span {
+        display: none !important;
+    }
+
+    .closeBtn {
+        display: none !important;
+    }
+
+    .sideMenu .logo i {
+        width: 40%;
+    }
+
+    .sideMenu .nav {
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sideMenu .nav li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sideMenu .nav li a {
+        justify-content: center;
+        padding: 15px;
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+    }
+
+    .sideMenu .social {
+        position: absolute;
+        bottom: 30px;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
