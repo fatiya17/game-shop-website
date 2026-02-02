@@ -1,0 +1,103 @@
+.bag h1 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.empty-bag h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.empty-bag p {
+    color: #ccc;
+    text-align: center;
+}
+
+/* TABLE STYLING */
+.bag .shopBagTable {
+    width: 100%;
+    color: #ffffff;
+    margin-top: 20px;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.bag .shopBagTable thead tr th {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--second); 
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom:var(--second); 
+}
+
+.bag .shopBagTable thead tr th:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.bag .shopBagTable thead tr th:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.itemCount {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.payment-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.total-text {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.total-text span {
+    color: var(--second);
+    margin-left: 10px;
+    font-size: 1.8rem;
+}
+
+.checkout-btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    background: var(--second);
+    color: #000;
+    font-weight: 700;
+    border-radius: 30px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    box-shadow: var(--second);
+}
+
+.checkout-btn:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .payment-box {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .bag h1 {
+        font-size: 2rem;
+    }
+}
