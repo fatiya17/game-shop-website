@@ -1,0 +1,38 @@
+.shopBagItem th,
+.shopBagItem td {
+    vertical-align: middle !important; 
+    color: #fff;
+    font-size: 1rem;
+    background: transparent !important; 
+}
+
+.shopBagItem .title {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.shopBagItem img {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.shopBagItem .payment {
+    font-weight: 700;
+    color: var(--second);
+}
+
+.shopBagItem a {
+    color: #ff3c3c;
+    font-size: 1.3rem;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.shopBagItem a:hover {
+    color: #ff0000;
+    transform: scale(1.2);
+    text-shadow: 0 0 10px #ff0000;
+}
