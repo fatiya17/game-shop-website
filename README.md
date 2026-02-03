@@ -92,9 +92,9 @@ Aplikasi ini menggunakan konsep **State Lifting** (Mengangkat State) di mana sel
 
 File ini bertindak sebagai "otak" aplikasi.
 
-* **State `games**`: Mengambil data mentah dari `public/api/gamesData.json`.
-* **State `library**`: Menyimpan array game yang di-like user.
-* **State `bag**`: Menyimpan array game yang dimasukkan ke keranjang.
+ **State `games`**: Mengambil data mentah dari `public/api/gamesData.json`.
+* **State `library`**: Menyimpan array game yang di-like user.
+* **State `bag`**: Menyimpan array game yang dimasukkan ke keranjang.
 * **LocalStorage**:
 * Setiap kali `library` atau `bag` berubah, data otomatis disimpan ke memori browser.
 * Saat web di-refresh, data diambil kembali agar tidak hilang.
