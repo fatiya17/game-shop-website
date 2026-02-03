@@ -223,3 +223,18 @@ Aplikasi akan berjalan di `http://localhost:3000`.
 Pastikan file data game berada di folder `public/api/gamesData.json` dan pemanggilan `fetch` di `Main.jsx` menggunakan path relatif (`/api/gamesData.json`) agar bisa berjalan di hosting seperti Vercel.
 
 ---
+
+## 🪶 Credits
+
+Developed by **Fatiya Labibah**.
+
+* **Resource:** [Part 1 Youtube](https://www.youtube.com/watch?v=JKuofETX0GM)
+* **Resource:** [Part 2 Youtube](https://www.youtube.com/watch?v=3bk7Yl_GHjc)
+
+---
+
+⭐ **Don't forget to star this repo if you find it useful!**
+
+---
+
+*© 2026 Game Shop Website Project. All Rights Reserved.*
