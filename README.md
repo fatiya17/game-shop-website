@@ -2,6 +2,7 @@
 
 **Play** adalah aplikasi web berbasis **React.js** yang berfungsi sebagai katalog dan toko game digital. Aplikasi ini memiliki fitur modern seperti *filtering*, *wishlist* (Library), *shopping cart* (Bag), dan desain antarmuka yang responsif dengan nuansa gaming (Neon/Dark Mode).
 
+![Preview](./public/image.png)
 ---
 
 ## 🛠️ Teknologi yang Digunakan
