@@ -1,4 +1,4 @@
-# 📘 Dokumentasi Proyek: Play - Game Shop Website
+# 🎮 Game Shop Website
 
 **Play** adalah aplikasi web berbasis **React.js** yang berfungsi sebagai katalog dan toko game digital. Aplikasi ini memiliki fitur modern seperti *filtering*, *wishlist* (Library), *shopping cart* (Bag), dan desain antarmuka yang responsif dengan nuansa gaming (Neon/Dark Mode).
 
@@ -216,8 +216,8 @@ npm start
 
 ```
 
-
 Aplikasi akan berjalan di `http://localhost:3000`.
+
 3. **Persiapan Build/Deploy (Penting)**:
 Pastikan file data game berada di folder `public/api/gamesData.json` dan pemanggilan `fetch` di `Main.jsx` menggunakan path relatif (`/api/gamesData.json`) agar bisa berjalan di hosting seperti Vercel.
 
